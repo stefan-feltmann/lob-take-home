@@ -1,0 +1,23 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "editor.tabSize": 2,
+  "javascript.validate.enable": false,
+  "editor.formatOnSave": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#d11141",
+    "activityBar.activeBorder": "#f37735",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#f37735",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#00aedb",
+    "titleBar.inactiveBackground": "#00aedb99",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#00aedb",
+    "statusBarItem.hoverBackground": "#d11141",
+    "statusBar.foreground": "#e7e7e7",
+    "activityBar.activeBackground": "#d11141"
+  },
+  "peacock.color": "#00aedb"
+}
