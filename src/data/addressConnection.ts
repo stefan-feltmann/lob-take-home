@@ -9,10 +9,12 @@ export class AddressConnection {
     this.jsonData = JSON.parse(jsonBuffer.toString())
   }
   public async queryState(state: string) {
+    logger.silly(JSON.stringify(state))
     let queryData = jsonQuery(`[state=${state}]`, {
       data: this.jsonData,
     })
 
-    logger.info(queryData)
+    logger.silly(JSON.stringify(queryData))
+    return queryData
   }
 }

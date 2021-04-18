@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/addresses', (req, res) => {
+app.get('/addressesByState', (req, res) => {
   addressConnection.queryState('MD')
   res.send('Addresses')
 })
