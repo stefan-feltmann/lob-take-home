@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`express REST test addressesByState 1`] = `
+Array [
+  Object {
+    "city": "Baltimore",
+    "line1": "3400 N. Charles St.",
+    "state": "MD",
+    "zip": "21218",
+  },
+]
+`;
+
+exports[`express REST test addressesByStreetNumber 1`] = `
+Array [
+  Object {
+    "city": "San Francisco",
+    "line1": "1600 Holloway Ave",
+    "state": "CA",
+    "zip": "94132",
+  },
+  Object {
+    "city": "San Francisco",
+    "line1": "1600 Holloway Ave",
+    "line2": "Suite 10",
+    "state": "CA",
+    "zip": "94132",
+  },
+  Object {
+    "city": "San Francisco",
+    "line1": "1600 Holloway Ave",
+    "line2": "Suite 20",
+    "state": "CA",
+    "zip": "94132",
+  },
+]
+`;
+
+exports[`express REST test addressesByStreetNumber 2`] = `
+Array [
+  Object {
+    "city": "San Francisco",
+    "line1": "1600 Holloway Ave",
+    "line2": "Suite 20",
+    "state": "CA",
+    "zip": "94132",
+  },
+]
+`;
+
+exports[`express REST test basic 1`] = `"Hello World!"`;
+
+exports[`express REST test basic 2`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+<head>
+<meta charset=\\"utf-8\\">
+<title>Error</title>
+</head>
+<body>
+<pre>Cannot GET /bad</pre>
+</body>
+</html>
+"
+`;
