@@ -48,7 +48,7 @@ Array [
 ]
 `;
 
-exports[`express REST test basic 1`] = `"Hello World!"`;
+exports[`express REST test basic 1`] = `""`;
 
 exports[`express REST test basic 2`] = `
 "<!DOCTYPE html>

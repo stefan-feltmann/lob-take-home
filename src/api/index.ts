@@ -1,19 +1,33 @@
 import express from 'express'
 import logger from '../common/logger'
-import querystring from 'querystring'
 import { AddressConnection } from '../data/addressConnection'
 
 const app = express()
 const port = 3000
 let addressConnection: AddressConnection
 
-app.get('/', async (req, res) => {
-  logger.info('Hello World!')
-  res.status(200).send('Hello World!')
+export const authentication = (req, res, next) => {
+  /*
+    Authentication code would go here
+  */
+  let badAuth = false
+  if (badAuth) {
+    return res.status(401).json({
+      status: 401,
+      message: 'UNAUTHORIZED',
+    })
+  } else {
+    next()
+  }
+}
+
+app.get('/', authentication, async (req, res) => {
+  res.status(200).send('')
 })
 
 app.get(
   '/addressesByState',
+  authentication,
   async (req, res): Promise<void> => {
     const stateQuery = 'state'
     let state = queryValues(req, stateQuery)
@@ -22,7 +36,7 @@ app.get(
   }
 )
 
-app.get('/addressesByStreetNumber', async (req, res) => {
+app.get('/addressesByStreetNumber', authentication, async (req, res) => {
   const streetQuery = 'street'
   let street = queryValues(req, streetQuery)
   const output = await addressConnection.queryStreetNumber(street)
@@ -31,7 +45,7 @@ app.get('/addressesByStreetNumber', async (req, res) => {
 
 let server = app.listen(port, () => {
   addressConnection = new AddressConnection()
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Listening at http://localhost:${port}`)
 })
 
 function queryValues(req, stateQuery: string) {
